@@ -1,0 +1,34 @@
+<body>
+   
+    <div class="container">
+      <div clas="row">
+        <div class="col-md-6 col-md-offset-3">
+          <form #userFrm="ngForm" (submit)="btnSubmitClick(userFrm)">
+  
+            <div class="form-group">
+              Reg Id :
+              <input type="text" #RegId="ngModel" [(ngModel)]="user.RegId" name="RegId" placeholder="enter RegId" class="form-control" required
+                pattern="[a-z,A-z]*$" />
+              <span *ngIf="RegId.errors && RegId.touched">
+              <span [hidden]="!RegId.errors.required">RegId is Required...</span>
+                
+              </span>
+            </div>
+            <div class="form-group">
+                Password :
+                <input type="password" #Password="ngModel" [(ngModel)]="user.Password" name="Password" placeholder="enter password" class="form-control" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,12}$"
+                />
+                <span *ngIf="Password.errors && Password.touched">
+                  <span [hidden]="!Password.errors.required">Password is Required...</span>
+    
+                </span>
+              </div>
+              <div>
+                  <input type="submit" class="btn btn-success" value="Signin" />
+                </div>
+            </form>
+            </div>
+            </div>
+            </div>
+            </body>
+          

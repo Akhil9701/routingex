@@ -1,0 +1,22 @@
+<body>
+<h4>Player List</h4>
+<div class="container">
+
+    <table class="table">
+        <tr *ngFor="let p of players">
+            <td>{{p.id}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.country}}</td>
+
+            <td>{{p.totruns}}</td>
+            <td>{{p.totwickets}}</td>
+            <td>
+                <button class="btn btn-primary">Edit</button>
+            </td>
+            <td>
+                <button class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
