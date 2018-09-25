@@ -11,16 +11,18 @@ import { ShowallplayersComponent } from './showallplayers/showallplayers.compone
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { UpdateplayersComponent } from './updateplayers/updateplayers.component';
 
 let routArray: Routes = [
-  {path:"",component:HomeComponent},
-  { path: "home", component: HomeComponent },
-  { path: "aboutus", component: AboutusComponent },
-  { path: "contactUs", component: ContactusComponent },
-  { path: "addPlayers", component: AddplayersComponent },
-  { path: "showallplayers", component: ShowallplayersComponent },
-  { path: "login", component: LoginComponent },
-  { path: "register", component: RegisterComponent }
+  {path:'',component:HomeComponent},
+  { path: 'home', component: HomeComponent },
+  { path: 'aboutus', component: AboutusComponent },
+  { path: 'contactUs', component: ContactusComponent },
+  { path: 'addPlayers', component: AddplayersComponent },
+  { path: 'showallplayers', component: ShowallplayersComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  {path:'`updateplayers`/:id',component:UpdateplayersComponent}
 ]
 
 @NgModule({
@@ -33,7 +35,8 @@ let routArray: Routes = [
     ShowallplayersComponent,
     LoginComponent,
     RegisterComponent,
-    AboutusComponent
+    AboutusComponent,
+    UpdateplayersComponent
   ],
   imports: [
     BrowserModule, 

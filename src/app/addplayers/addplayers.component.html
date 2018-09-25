@@ -1,17 +1,50 @@
-<body>
-<h2>Add Players</h2>
-<div>
-  You can add Your Favorite Players here:
-  <select>
-      <option class="placeholder" selected disabled value="">select player</option>
-      <option value="rohithsharma">Rohit sharma</option>
-      <option value="kohli">Virat Kohli</option>
-      <option value="dhoni">MS Dhoni</option>
-      <option value="hardik">Hardik Pandya</option>
-      <option value="rahul">KL Rahul</option>
-      <option value="bumrah">Jasprit Bumrah</option>
-    </select>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form #plyFrm="ngForm" (submit)="btnaddplayers(plyFrm)">
+
+          <div class="form-group">
+            Player Id:
+            <input type="text" [(ngModel)]="ply.id" name="id" class="form-control"/>
+          </div>
+          <div class="form-group">
+              Player Name:
+
+            <input type="text" [(ngModel)]="ply.name" name="name" class="form-control"/>
+          </div>
+          <div class="form-group">
+              Player Image:
+
+              <img [src]="url" width="150px" height="150px"  />
+              <input type="file"(change)="fileSelect($event)"/>
+              </div>
+          <div class="form-group">
+              Player Country:
+
+            <input type="text" [(ngModel)]="ply.country" name="country" class="form-control"/>
+          </div>
+          <div class="form-group">
+              Player Totruns:
+
+            <input type="text" [(ngModel)]="ply.totruns" name="totruns" class="form-control"/>
+          </div>
+          <div class="form-group">
+              Player Totwickets:
+
+            <input type="text" [(ngModel)]="ply.totwickets" name="totwickets" class="form-control"/>
+          </div>
+          
+          
+          <div>
+          <input type="submit" class="btn btn-primary">
+          </div>
+
+          <br>
+          <br>
+      </form>
+
+    </div>
+  </div>
 </div>
-</body>
 
 
